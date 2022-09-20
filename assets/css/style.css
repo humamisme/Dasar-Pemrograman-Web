@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* BASE */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid #ff000090; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3{
+    color: #262121;
+}
+
+p{
+    color: #757171;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* LAYOUT */
+
+.container{
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1250px;
+}
+
+/* LOGO */
+
+.logo{
+    font-weight: 300;
+}
+
+.logo span{
+    font-weight: 600;
+}
+
+/* HEADER */
+
+.header{
+    display: inline;
+}
+
+/* Navigation */
+
+.nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #1B2021;
+    box-shadow: 1px 1px 10px 2px #00000020;
+    z-index: 10;
+}
+
+.nav a{
+    color: #F3F4ED;
+}
+
+.nav a:hover{
+    color: #D8AC9C;
+}
+
+/* navigation logo */
+
+.nav-logo{
+    font-size: 2rem;
+}
+
+/* navigation menu */
+
+.nav-menu-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-item{
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 1.25rem;
+    border-radius: 5px;
+}
+
+.nav-item:active{
+    background-color: #0c0f1067;
+}
+
+.nav-item.active a{
+    color: #D8AC9C;
+}
+
+/* navigation menu toggle */
+
+.nav-menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.nav-menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #F3F4ED;
+    transition: all 0.25s;
+}
+
+/* humberger menu animation */
+
+.nav-menu-toggle span:first-child{
+    transform-origin: 0 0;
+}
+
+.nav-menu-toggle span:last-child{
+    transform-origin: 0 100%;
+}
+
+.nav-menu-toggle.active span:first-child{
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.nav-menu-toggle.active span:last-child{
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.nav-menu-toggle.active span:nth-child(2){
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Jumbotron */
+
+.jumbotron{
+    height: 100vh;
+    background: linear-gradient(180deg, #1B20216b, #1B2021cd), url('../img/banner.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.centered-element{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron h1{
+    font-size: 7vw;
+    color: #F3F4ED;
+    text-shadow: 0 0 5px #D8AC9C;
+}
+
+.jumbotron p{
+    font-size: 2.5vw;
+    font-weight: 300;
+    letter-spacing: 1vw;
+    color: #F3F4ED;
+    text-shadow: 0 0 5px #D8AC9C;
+}
+
+/* MAIN */
+
+article{
+    padding-top: 60px;
+}
+
+article h2{
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+article>p{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-top: 5px;
+    text-align: center;
+}
+
+/* Content */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.text-box h3{
+    font-size: 1.25rem;
+}
+
+.text-box p{
+    padding-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* content box */
+
+.content-box{
+    margin-top: 40px;
+    display: flex;
+    flex-basis: 46%;
+    gap: 20px;
+}
+
+.content-box .featured-image{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* card box */
+
+.card-box{
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    flex-basis: 40%;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 10px 2px #00000020;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.card-box .featured-image{
+    padding: 0 10%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-box .text-box{
+    padding: 0 20px;
+}
+
+.card-box h3{
+    font-size: 1.5rem;
+}
+
+.normal-price{
+    font-style: italic;
+    text-decoration: line-through;
+    color: rgb(237, 128, 128);
+}
+
+.promo-price{
+    font-weight: 600;
+}
+
+/* lined */
+
+.lined{
+    margin-top: 40px;
+    flex-basis: 30%;
+}
+
+.lined h3{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #bbbbbb;
+}
+
+.lined table{
+    width: 100%;
+}
+
+.lined td{
+    padding-top: 10px;
+}
+
+.menu-name{
+    color: #757171;
+}
+
+.menu-price{
+    text-align: end;
+}
+
+.description{
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: end;
+    color: #757171;
+}
+
+/* review */
+
+.review{
+    flex-basis: 30%;
+    justify-content: space-evenly;
+}
+
+.review-name{
+    width: 100%;
+    text-align: center;
+}
+
+.review-text{
+    width: 100%;
+    text-align: center;
+    color: #757171;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 60px;
+    background-color: #3A3845;
+    color: #bbbbbb;
+}
+
+footer .content{
+    justify-content: space-evenly;
+}
+
+footer h2{
+    color: #bbbbbb;
+}
+
+footer p{
+    /* padding-top: 20px; */
+    color: #bbbbbb;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+footer .description{
+    text-align: center;
+}
+
+footer article{
+    padding: 20px 10px;
+}
+
+.content-footer{
+    margin: 30px 0;
+    flex-basis: 33%;
+}
+
+.author-box{
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #35333f;
+    max-width: 250px;
+}
+
+.author-photo{
+    margin: 20px auto;
+    width: 80%;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+/* Credit */
+
+.credit{
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid #66656c;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.credit span{
+    font-weight: 500;
+}
+
+/* RESPONSIVE BREAKPOINT */
+
+@media screen and (max-width: 1250px) {
+
+    /* Content Box*/
+
+    .content-box{
+        flex-basis: 90%;
+        gap: 30px;
+    }
+
+    .content-box:nth-child(even) .featured-image{
+        order: 2;
+    }
+
+    /* Lined */
+
+    .lined{
+        flex-basis: 100%;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    /* Navigation */
+
+    .nav-menu-toggle{
+        display: flex;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        padding: 50px 0;
+        text-align: end;
+        background-color: #1b2021e2;
+        z-index: -1;
+        right: -100%;
+        transition: all 0.5s;
+    }
+
+    .nav-list.slide{
+        right: 0;
+    }
+
+    .nav-item{
+        border-radius: 0;
+        padding: 12px 35px;
+    }
+
+    /* Jumbotron */
+
+    .jumbotron{
+        height: 50vh;
+    }
+
+    /* Content Box */
+
+    .content-box{
+        margin-top: 50px;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .content-box .featured-image{
+        width: 100%;
+    }
+
+    .content-box:nth-child(even) .featured-image{
+        order: 1;
+    }
+
+    .content-box:nth-child(even) .text-box{
+        order: 2;
+    }
+
+    /* card box */
+
+    .card-box .text-box{
+        padding: 0 10px;
+    }
+
+    .card-box h3{
+        font-size: 1.25rem;
+    }
+
+    /* review */
+
+    .review{
+        flex-basis: 100%;
+        max-width: 400px;
+    }
+
+    /* Footer */
+
+    .content-footer{
+        flex-basis: 90%;
+    }
+
+    .author-box{
+        max-width: 275px;
+    }
+}
+
+@media screen and (max-width: 577px) {
+
+    /* Navigation */
+
+    .nav-logo{
+        display: none;
+    }
+
+    .nav-menu-wrapper{
+        justify-content: end;
+    }
+
+    /* Jumbotron */
+
+    .jumbotron{
+        height: 30vh;
+    }
+
+    /* Card Box */
+
+    #promo .card-box{
+        flex-basis: 100%;
+        max-width: 300px;
+    }
+
+    /* review */
+
+    .review{
+        flex-basis: 90%;
+    }
+}
