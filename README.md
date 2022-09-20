@@ -1,4 +1,4 @@
-# Dicoding-Submission-Frontend-Web-Pemula
+# Dicoding-Submission-Pemrograman-Web-Dasar
 Aplikasi Web untuk menyelesaikan Submission kelas Belajar Dasar Pemrograman Web dari Dicoding
 # Screenshot
 ## Normal View
